@@ -78,36 +78,44 @@ body { background: #0b0518; color: white; font-family: 'Plus Jakarta Sans', sans
 
 
 /* --- Featured Episodes --- */
+
 .episodes { padding: 80px 0; }
-.ep-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
-.video-card { background: #1a0b2e; border-radius: 25px; overflow: hidden; }
-.video-box { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.ep-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; padding-top: 60px; }
+.ep-card { background: #1a0b2e; border-radius: 25px; overflow: hidden; text-align: left; }
+.video-box { position: relative; padding-bottom: 56.25%; height: 0; }
 .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-.ep-text { padding: 25px; }
-.ep-text h4 { font-size: 16px; margin-bottom: 8px; }
-.ep-text span { color: #22c55e; font-size: 11px; font-weight: bold; }
+.ep-body { padding: 25px; }
+.ep-body h4 { font-size: 18px; margin-bottom: 10px; }
+
+
+.ep-small-text { font-size: 13px; color: #9ca3af; line-height: 1.6; margin-bottom: 15px; }
+.ep-time { color: #22c55e; font-size: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+
+
+
 
 /* --- Host--- */
 .host { padding: 80px 0 150px 0; }
 .host-box { background: #1a0b2e; padding: 50px; border-radius: 40px; display: flex; align-items: center; gap: 40px; }
 .host-img { width: 180px; border-radius: 25px; }
-/* ১. আইকনগুলোর বাইরের বক্সটিকে সাজানো */
+
+
 .social-icons {
-    display: flex;       /* আইকনগুলোকে এক লাইনে পাশাপাশি রাখবে */
-    gap: 15px;           /* প্রতিটি আইকনের মাঝে ১৫ পিক্সেল ফাঁকা জায়গা তৈরি করবে */
-    margin-top: 20px;    /* উপরের লিখা থেকে আইকনগুলোকে একটু নিচে নামাবে */
-    align-items: center; /* আইকনগুলোকে সমান উচ্চতায় রাখবে */
+    display: flex;       
+    gap: 15px;          
+    margin-top: 20px;    
+    align-items: center; 
 }
 
-/* ২. আইকনগুলোর সাইজ ঠিক করা */
+
 .social-icons img {
-    width: 22px;         /* আইকনের চওড়া (আপনার পছন্দমতো ছোট-বড় করতে পারেন) */
-    height: auto;        /* উচ্চতা অটোমেটিক ঠিক থাকবে */
-    cursor: pointer;     /* মাউস নিলে হাতের চিহ্ন আসবে */
-    transition: 0.3s;    /* এনিমেশন স্মুথ করার জন্য */
+    width: 22px;         
+    height: auto;        
+    cursor: pointer;     
+    transition: 0.3s;    
 }
 
-/* ৩. মাউস নিলে আইকন হালকা বড় হওয়ার জন্য (ঐচ্ছিক) */
+
 .social-icons img:hover {
     transform: scale(1.2);
 }
@@ -123,7 +131,7 @@ body { background: #0b0518; color: white; font-family: 'Plus Jakarta Sans', sans
 
 
 
-/* ১. Small device (up to 576px) */
+/* Small device (up to 576px) */
 @media screen and (max-width: 576px) {
     
     .nav-links, .sub-btn { display: none !important; }
@@ -157,7 +165,7 @@ body { background: #0b0518; color: white; font-family: 'Plus Jakarta Sans', sans
 
 
 
-/* ২. Large device (above 992px) */
+/*Large device (above 992px) */
 @media screen and (min-width: 992px) {
     
     .nav-links, .sub-btn { display: flex !important; }
@@ -167,3 +175,15 @@ body { background: #0b0518; color: white; font-family: 'Plus Jakarta Sans', sans
     .stats-row { flex-direction: row; }
 }
 
+
+/* animate */
+@keyframes pulse-shortcut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } 
+    100% { transform: scale(1); }
+}
+
+/* animate */
+.btn-animate {
+    animation: pulse-shortcut 2s infinite ease-in-out;
+}
