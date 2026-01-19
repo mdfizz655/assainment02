@@ -53,5 +53,185 @@ body { background: #0b0518;
     color: white; border: none; padding: 10px 22px; border-radius: 50px; font-weight: bold; cursor: pointer;
 }
 
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-.hamburger span { width: 22px; height: 2px; background: white; }
+.hamburger { display: none; 
+    flex-direction: column; 
+    gap: 5px; 
+    cursor: pointer; 
+}
+.hamburger span { width: 22px; 
+    height: 2px; 
+    background: white; 
+}
+
+
+/* --- Hero bar--- */
+
+.hero { text-align: center; 
+    padding: 80px 0; 
+    position: relative; 
+}
+
+.bg-wave { position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    opacity: 0.2; 
+    z-index: -1; 
+}
+
+.mic-area { position: relative; 
+    display: inline-block; 
+    margin-bottom: 30px; 
+}
+
+.mic-circle {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    border: 3px solid #222;
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+}
+
+.circle-bg { width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.mic-main { position: absolute; 
+    width: 90px; 
+    z-index: 5; 
+}
+
+.badge { position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    background: #22c55e; 
+    font-size: 9px; 
+    padding: 4px 8px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+}
+
+
+.hero-title { font-size: 70px; 
+    font-weight: 800; 
+    margin-bottom: 10px; 
+}
+
+.hero-desc { color: #9ca3af; 
+    margin-bottom: 40px; 
+}
+
+.hero-btns { display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.hero-btns button { padding: 14px 28px; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.btn-icon { width: 18px; }
+
+.btn-primary { background: linear-gradient(135deg, #ec4899, #f97316, #a855f7); 
+    color: white; 
+    border: none; 
+}
+
+.btn-outline { 
+    background: transparent; 
+    border: 1px solid #8b5cf6; 
+    color: white; 
+}
+
+
+/* ---About bar --- */
+
+.about { padding: 80px 0; }
+
+.section-title { font-size: 32px; 
+    font-weight: 800; 
+    margin-bottom: 30px; 
+}
+
+.about-p p { color: #9ca3af; 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.stats-row { display: flex; 
+    justify-content: space-between; 
+    margin-top: 50px; 
+}
+
+.stat h3 { font-size: 34px; 
+    color: #22c55e; 
+}
+
+.stat p { font-size: 10px; 
+    color: #555; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
+
+
+
+/* ---Why bar--- */
+
+.why-choose { padding: 80px 0; }
+
+.bento-grid { display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; 
+}
+
+.card { background: #1a0b2e; 
+    padding: 30px; 
+    border-radius: 25px; 
+    border: 1px solid rgba(255,255,255,0.05); 
+}
+
+.card .icon { width: 45px; 
+    margin-bottom: 20px; 
+}
+
+.card h3 { font-size: 18px; 
+    margin-bottom: 12px; 
+}
+
+.card p { color: #9ca3af; 
+    font-size: 13px; 
+    line-height: 1.6; 
+}
+
+/* cardbar */
+
+.card-tall { grid-row: span 2; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.card-wide { grid-column: span 2; 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.card-wide .icon { margin-bottom: 0; }
+.card-bottom-left { grid-column: span 2; }
+
+
+
+
